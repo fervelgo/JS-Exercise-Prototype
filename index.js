@@ -112,14 +112,17 @@ function Airplane(name) {
   Baby.prototype.play = function() {
     return `Playing with ${this.favoriteToy}`;
   }
+
+
+
   
   /* 
     TASK 4
     In your own words explain the four principles for the "this" keyword below:
-    1. 
-    2. 
-    3. 
-    4. 
+    1. Window/global: the broadest context for this to live in. It's the broadest context -this- can have. It is literally global, in which case it may be more problematic than useful, but it still is explanatory towards how -this- works.
+    2. Implicit: Takes the bounds of a preceding function. Whenever the function called has a preceding function, that will be what -this- point to in that case. 
+    3. New binding: When we create a new function from a constructor function, -this- refers to the parameters in the constructor, that are passed when calling it with the new function we are creating. So, -this- ultimately refers to the parameters we pass to the constructor via the new function we create with said constructor.
+    4. Explicit binding: Being explicit when we call for a function can be useful because it overrides the constructor function. In that case -this- points to the overriding function we are feeding either the .call or the .apply method. 
   */
   
   
